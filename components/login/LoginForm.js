@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, TextInput, Pressable, Text } from "react-native";
+import { View, StyleSheet, TextInput, Text, TouchableOpacity } from "react-native";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
@@ -57,9 +57,9 @@ const LoginForm = () => {
           {errors.password && (
             <Text style={{ fontSize: 15, color: "red" }}>{errors.password}</Text>
           )}
-          <Pressable style={styles.button} onPress={() => handleSubmit()}>
+          <TouchableOpacity style={styles.button} onPress={() => handleSubmit()}>
             <Text style={styles.buttonText}>Login</Text>
-          </Pressable>
+          </TouchableOpacity>
         </View>
       )}
     </Formik>
