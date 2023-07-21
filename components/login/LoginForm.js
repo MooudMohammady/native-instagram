@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet, TextInput, Text, TouchableOpacity } from "react-native";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { useNavigation } from "@react-navigation/native";
 
 const userSchema = Yup.object().shape({
   password: Yup.string().required('Password is required'),
@@ -9,6 +10,7 @@ const userSchema = Yup.object().shape({
 });
 
 const LoginForm = () => {
+  const navigation = useNavigation();
   return (
     <Formik
       initialValues={{
@@ -18,6 +20,7 @@ const LoginForm = () => {
       validationSchema={userSchema}
       onSubmit={(values) => {
         console.log(values);
+        navigation.replace('Aplication')
       }}>
       {({
         handleChange,
