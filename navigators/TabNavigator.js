@@ -7,6 +7,7 @@ import {
   Feather,
   MaterialIcons,
 } from "@expo/vector-icons";
+import HomeScreen from "../screens/HomeScreen";
 
 const TabNavigator = () => {
   const Tab = createBottomTabNavigator();
@@ -33,7 +34,7 @@ const TabNavigator = () => {
         <Feather size={size} color={color} name='shopping-bag' />
       )}}/>
       <Tab.Screen name="Profile" component={HomeScreen} options={{tabBarIcon:({color,size})=>(
-        <Image source={require('../assets/profile.jpeg')} style={{width:30,height:30,borderRadius:15}}/>
+        <Image source={require('../assets/profile.jpg')} style={{width:30,height:30,borderRadius:15}}/>
       )}}/>
     </Tab.Navigator>
   );
