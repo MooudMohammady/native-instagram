@@ -5,7 +5,6 @@ import {
   ScrollView,
   Image,
   Text,
-  TouchableHighlight,
   TouchableOpacity,
 } from "react-native";
 import Users from "../../assets/data/users";

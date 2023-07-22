@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import {
-  View,
   StyleSheet,
   SafeAreaView,
-  Text,
   StatusBar,
   ScrollView,
-  FlatList,
   RefreshControl,
 } from "react-native";
 import Header from "../components/home/Header";
