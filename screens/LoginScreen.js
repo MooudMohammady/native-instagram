@@ -1,14 +1,16 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, KeyboardAvoidingView, Platform } from "react-native";
 import LoginForm from "../components/login/LoginForm";
 import Brand from "../components/login/brand";
 
 const LoginScreen = () => {
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={styles.container}>
       <Brand />
-      <LoginForm/>
-    </View>
+      <LoginForm />
+    </KeyboardAvoidingView>
   );
 };
 
